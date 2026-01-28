@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shrikant Sahare | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== GLOBAL RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+/* ===== BODY ===== */
+body{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background-size:400% 400%;
+  animation:bgAnim 12s ease infinite;
+  color:#fff;
+}
+
+@keyframes bgAnim{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ===== NAVBAR ===== */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  backdrop-filter:blur(10px);
+  background:rgba(0,0,0,0.3);
+  z-index:1000;
+}
+
+nav h2{color:#00eaff}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:25px;
+}
+
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:500;
+  transition:.3s;
+}
+nav ul li a:hover{color:#00eaff}
+
+/* ===== SECTIONS ===== */
+section{
+  min-height:100vh;
+  padding:140px 10% 80px;
+}
+
+/* ===== HOME ===== */
+#home{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  min-height:100vh;
+  gap:50px;
+}
+
+.home-content{
+  max-width:550px;
+}
+
+#home h1{
+  font-size:3.5rem;
+}
+
+#home span{
+  color:#00eaff;
+}
+
+#home p{
+  margin:15px 0 30px;
+  opacity:.85;
+}
+
+/* ===== PHOTO ===== */
+.home-img{
+  width:280px;
+  height:280px;
+  border-radius:20px; /* square with smooth corners */
+  overflow:hidden;
+  border:4px solid #00eaff;
+  box-shadow:0 0 40px rgba(0,234,255,.6);
+}
+
+.home-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ===== BUTTON ===== */
+.btn{
+  width:fit-content;
+  padding:12px 30px;
+  background:#00eaff;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 30px rgba(0,234,255,.6);
+}
+
+/* ===== ABOUT ===== */
+#about h1,
+#projects h1,
+#contact h1{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+#about span,
+#projects span,
+#contact span{color:#00eaff}
+
+#about p{
+  max-width:800px;
+  line-height:1.8;
+  opacity:.9;
+  margin-bottom:20px;
+}
+
+/* ===== PROJECTS ===== */
+.project-wrapper{max-width:900px}
+
+.project-card{
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);
+  border-radius:25px;
+  padding:40px;
+  margin-top:30px;
+  transition:.4s;
+}
+.project-card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 25px 50px rgba(0,0,0,.4);
+}
+.project-card h2 a{
+  color:#00eaff;
+  text-decoration:none;
+}
+.project-card p{line-height:1.8;opacity:.9}
+.project-card ul{margin-left:20px}
+
+.tags span{
+  display:inline-block;
+  padding:6px 15px;
+  border-radius:20px;
+  background:rgba(0,234,255,.2);
+  color:#00eaff;
+  margin:10px 10px 0 0;
+  font-size:.85rem;
+}
+
+/* ===== CONTACT ===== */
+.contact-info{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  max-width:800px;
+}
+.info-card{
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(12px);
+  border-radius:20px;
+  padding:30px;
+  transition:.4s;
+}
+.info-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.info-card h3{color:#00eaff}
+.info-card a{
+  color:#fff;
+  text-decoration:none;
+}
+.info-card a:hover{color:#00eaff}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:25px;
+  opacity:.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  #home h1{font-size:2.5rem}
+  nav ul{gap:15px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Portfolio</h2>
+  <ul>
+    <li><a href="home">Home</a></li>
+    <li><a href="about">About</a></li>
+    <li><a href="projects">Projects</a></li>
+    <li><a href="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="home">
+  <div class="home-content">
+    <h1>Hi, I'm <span>Shrikant Sahare</span></h1>
+    <p>I build modern, responsive, and visually appealing websites using clean and efficient code.</p>
+    <a href="projects" class="btn">See My Projects</a>
+  </div>
+
+  <div class="home-img">
+    <img src="https://i.postimg.cc/GtjzPWXy/IMG-20260124-092455.jpg" alt="Shrikant Sahare">
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+  <h1>About <span>Me</span></h1>
+  <p>I’m a passionate and creative web developer who loves building modern, responsive, and user-friendly websites.</p>
+  <p>I enjoy turning ideas into real-world digital experiences using HTML, CSS, and JavaScript.</p>
+  <p>I’m constantly learning to stay updated with the latest web technologies.</p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h1>My <span>Projects</span></h1>
+  <div class="project-wrapper">
+    <div class="project-card">
+      <h2>🏫 <a href="https://yashsawalakhe.github.io/KINDERGARDEN-LONARA/index.html" target="_blank">Kindergarten School Website</a></h2>
+      <p>A web-based platform to improve communication between teachers, parents, and students.</p>
+      <ul>
+        <li>Teacher–parent communication</li>
+        <li>Student activity sharing</li>
+        <li>Responsive child-friendly UI</li>
+      </ul>
+      <div class="tags">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h1>Get in <span>Touch</span></h1>
+  <p>You can reach me through the details below.</p>
+
+  <div class="contact-info">
+    <div class="info-card">
+      <h3>📧 Email</h3>
+      <p><a href="mailto:yourname@email.com">shrikantsahare92@gmail.com</a></p>
+    </div>
+    <div class="info-card">
+      <h3>📞 Phone</h3>
+      <p>+91 7507950833</p>
+    </div>
+    <div class="info-card">
+      <h3>📍 Location</h3>
+      <p>Subhash nagar Kamgar Colony Nagpur,Maharashtra , India</p>
+    </div>
+    <div class="info-card">
+      <h3>💼 Social</h3>
+      <p><a href="https://www.linkedin.com/in/shrikant-sahare?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a><br><a href="https://github.com/Shrikantsahare92">GitHub</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Shrikant Sahare. All Rights Reserved.
+</footer>
+
+</body>
+</html>
