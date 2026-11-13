@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Projects | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ===== BODY ===== */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: bgAnim 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes bgAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+nav h2 {
+  color: #00eaff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00eaff;
+}
+
+/* ===== SECTION ===== */
+section {
+  min-height: 100vh;
+  padding: 140px 10% 80px;
+}
+
+/* ===== PROJECTS ===== */
+#projects h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#projects span {
+  color: #00eaff;
+}
+
+.project-wrapper {
+  max-width: 900px;
+}
+
+.project-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 40px;
+  margin-top: 30px;
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
+}
+
+.project-card h2 a {
+  color: #00eaff;
+  text-decoration: none;
+}
+
+.project-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.project-card p {
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.project-card ul {
+  margin-left: 20px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.tags {
+  margin-top: 25px;
+}
+
+.tags span {
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 20px;
+  background: rgba(0,234,255,0.2);
+  color: #00eaff;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+  #projects h1 {
+    font-size: 2.3rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Portfolio</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- PROJECTS SECTION -->
+<section id="projects">
+  <div class="project-wrapper">
+    <h1>My <span>Projects</span></h1>
+
+    <div class="project-card">
+      <h2>
+        🏫 
+        <a href="https://yashsawalakhe.github.io/KINDERGARDEN-LONARA/index.html" target="_blank">
+          Kindergarden School Website
+        </a>
+      </h2>
+
+      <p>
+        A web-based platform designed for a kindergarten school to improve
+        communication between teachers, students, and parents.
+        It provides a simple and effective way to share updates, activities,
+        and important announcements.
+      </p>
+
+      <p>
+        The website focuses on a friendly, colorful, and easy-to-use interface
+        suitable for young children while also meeting the needs of teachers
+        and parents.
+      </p>
+
+      <h3>Key Features:</h3>
+      <ul>
+        <li>Teacher–parent communication for notices and updates</li>
+        <li>Student activity and homework sharing</li>
+        <li>Event and schedule information for parents</li>
+        <li>Child-friendly and engaging design</li>
+        <li>Fully responsive across devices</li>
+      </ul>
+
+      <h3 style="margin-top:20px;">Technologies Used:</h3>
+      <div class="tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Responsive Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Your Name. All Rights Reserved.
+</footer>
+
+</body>
+</html>

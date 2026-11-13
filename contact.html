@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Me | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ===== BODY ===== */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: bgAnim 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes bgAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+nav h2 {
+  color: #00eaff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00eaff;
+}
+
+/* ===== SECTION ===== */
+section {
+  min-height: 100vh;
+  padding: 140px 10% 80px;
+  display: flex;
+  align-items: center;
+}
+
+/* ===== CONTACT ===== */
+#contact {
+  width: 100%;
+}
+
+#contact h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#contact span {
+  color: #00eaff;
+}
+
+#contact p {
+  max-width: 650px;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+/* ===== CONTACT DETAILS ===== */
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.4s;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.info-card h3 {
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+.info-card a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.info-card a:hover {
+  color: #00eaff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+  #contact h1 {
+    font-size: 2.3rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Portfolio</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- CONTACT SECTION -->
+<section id="contact">
+  <div>
+    <h1>Get in <span>Touch</span></h1>
+    <p>
+      Interested in working together or just want to say hello?
+      You can reach me directly through the details below.
+      I’m always open to new opportunities and collaborations.
+    </p>
+
+    <div class="contact-info">
+      <div class="info-card">
+        <h3>📧 Email</h3>
+        <p><a href="mailto:yourname@email.com">shrikantsahare92@gmail.com</a></p>
+      </div>
+
+      <div class="info-card">
+        <h3>📞 Phone</h3>
+        <p>+91 7507950833</p>
+      </div>
+
+      <div class="info-card">
+        <h3>📍 Location</h3>
+        <p>Subhashnagar kamgar colony Nagpur, Maharashtra , India </p>
+      </div>
+
+      <div class="info-card">
+        <h3>💼 Social</h3>
+        <p>
+          <a href="harehttps://www.linkedin.com/in/shrikant-sahare?utm_source=share&utm_campaign=s_via&utm_content=profile&utm_medium=android_app">LinkedIn</a><br>
+          <a href="https://github.com/Shrikantsahare92">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Your Name. All Rights Reserved.
+</footer>
+
+</body>
+</html>

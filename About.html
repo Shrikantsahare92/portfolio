@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>About Me | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ===== BODY ===== */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-size: 400% 400%;
+  animation: bgAnim 12s ease infinite;
+  color: #fff;
+}
+
+@keyframes bgAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+nav h2 {
+  color: #00eaff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00eaff;
+}
+
+/* ===== SECTION ===== */
+section {
+  min-height: 100vh;
+  padding: 140px 10% 80px;
+}
+
+/* ===== ABOUT ===== */
+#about h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#about span {
+  color: #00eaff;
+}
+
+#about p {
+  max-width: 800px;
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px;
+  opacity: 0.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+  #about h1 {
+    font-size: 2.3rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Portfolio</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <h1>About <span>Me</span></h1>
+
+  <p>
+    I’m a passionate and creative web developer who loves building modern,
+    responsive, and user-friendly websites. I focus on writing clean, efficient
+    code while delivering visually appealing designs.
+    I enjoy turning ideas into real-world digital experiences using HTML, CSS,
+    JavaScript, and modern web technologies. My goal is to create websites that
+    not only look great but also provide excellent performance and usability.
+    I’m constantly learning and improving my skills to stay updated with the
+    latest trends in web development and design.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Your Name. All Rights Reserved.
+</footer>
+
+</body>
+</html>

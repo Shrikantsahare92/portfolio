@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shrikant Sahare | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  background-size:400% 400%;
+  animation:bgAnim 12s ease infinite;
+  color:#fff;
+}
+
+@keyframes bgAnim{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,.35);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav h2{color:#00eaff}
+
+/* HOME */
+#home{
+  min-height:100vh;
+  padding:140px 10% 80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:50px;
+}
+
+.home-content{
+  max-width:550px;
+}
+
+#home h1{
+  font-size:3.5rem;
+}
+
+#home span{
+  color:#00eaff;
+}
+
+#home p{
+  margin:15px 0 30px;
+  opacity:.85;
+}
+
+/* IMAGE */
+.home-img{
+  width:280px;
+  height:280px;
+  border-radius:20px;
+  overflow:hidden;
+  border:4px solid #00eaff;
+  box-shadow:0 0 40px rgba(0,234,255,.6);
+}
+
+.home-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  background:#00eaff;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 30px rgba(0,234,255,.6);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  #home{
+    flex-direction:column;
+    text-align:center;
+  }
+  #home h1{font-size:2.5rem}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h2>Portfolio</h2>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+  <div class="home-content">
+    <h1>Hi, I'm <span>Shrikant Sahare</span></h1>
+    <p>I build modern, responsive, and visually appealing websites using clean and efficient code.</p>
+    <a href="#" class="btn">Welcome</a>
+  </div>
+
+  <div class="home-img">
+    <img src="https://i.postimg.cc/GtjzPWXy/IMG-20260124-092455.jpg" alt="Shrikant Sahare">
+  </div>
+</section>
+
+</body>
+</html>
