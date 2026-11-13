@@ -1,115 +1,456 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shrikant Sahare | Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shrikant Sahare | Portfolio</title>
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-  scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-body{
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-  background-size:400% 400%;
-  animation:bgAnim 12s ease infinite;
-  color:#fff;
+html {
+    scroll-padding-top: 85px;
 }
 
-@keyframes bgAnim{
-  0%{background-position:0% 50%}
-  50%{background-position:100% 50%}
-  100%{background-position:0% 50%}
+body {
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    background-size: 400% 400%;
+    animation: bgAnim 12s ease infinite;
+    color: white;
+}
+
+@keyframes bgAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+:root {
+    --cyan: #00eaff;
+    --glass: rgba(255,255,255,0.10);
 }
 
 /* NAVBAR */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:20px 10%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:rgba(0,0,0,.35);
-  backdrop-filter:blur(10px);
-  z-index:1000;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
 }
 
-nav h2{color:#00eaff}
+nav h2 {
+    color: var(--cyan);
+    font-size: 26px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    list-style: none;
+}
+
+nav ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul a:hover {
+    color: var(--cyan);
+}
+
+/* COMMON SECTIONS */
+section {
+    min-height: 100vh;
+    padding: 120px 10% 80px;
+    scroll-margin-top: 75px;
+}
+
+.section-title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title span,
+.highlight {
+    color: var(--cyan);
+}
+
+.section-text {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    line-height: 1.9;
+    color: #e0e0e0;
+}
 
 /* HOME */
-#home{
-  min-height:100vh;
-  padding:140px 10% 80px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:50px;
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
 }
 
-.home-content{
-  max-width:550px;
+.home-content {
+    max-width: 600px;
 }
 
-#home h1{
-  font-size:3.5rem;
+.home-content h3 {
+    font-size: 25px;
 }
 
-#home span{
-  color:#00eaff;
+.home-content h1 {
+    font-size: 48px;
+    margin: 15px 0;
 }
 
-#home p{
-  margin:15px 0 30px;
-  opacity:.85;
+.home-content h1 span {
+    color: var(--cyan);
 }
 
-/* IMAGE */
-.home-img{
-  width:280px;
-  height:280px;
-  border-radius:20px;
-  overflow:hidden;
-  border:4px solid #00eaff;
-  box-shadow:0 0 40px rgba(0,234,255,.6);
+.home-content p {
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 30px;
 }
 
-.home-img img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
+.home-img {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--cyan);
+    box-shadow: 0 0 40px rgba(0,234,255,0.5);
 }
 
-/* BUTTON */
-.btn{
-  display:inline-block;
-  padding:12px 30px;
-  background:#00eaff;
-  color:#000;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
+.home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.btn:hover{
-  transform:scale(1.1);
-  box-shadow:0 10px 30px rgba(0,234,255,.6);
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--cyan);
+    color: #07151a;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,234,255,0.4);
+}
+
+/* ABOUT */
+.about-box {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    background: var(--glass);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    line-height: 1.9;
+}
+
+.about-box p {
+    margin-bottom: 18px;
+    color: #e0e0e0;
+}
+
+.education {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 4px solid var(--cyan);
+    background: rgba(0,0,0,0.2);
+}
+
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    gap: 22px;
+}
+
+.skill-card {
+    background: var(--glass);
+    padding: 30px 15px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,234,255,0.2);
+}
+
+.skill-card h3 {
+    color: var(--cyan);
+    margin-bottom: 10px;
+}
+
+/* EXPERIENCE */
+.experience-container {
+    max-width: 850px;
+    margin: auto;
+}
+
+.experience-card {
+    background: var(--glass);
+    padding: 28px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--cyan);
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateX(8px);
+}
+
+.experience-card h3 {
+    color: var(--cyan);
+    margin-bottom: 12px;
+}
+
+.experience-card p {
+    line-height: 1.8;
+    color: #ddd;
+}
+
+/* PROJECTS */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: var(--glass);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.4s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.project-card h3 {
+    color: var(--cyan);
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #ddd;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tags {
+    margin-top: 15px;
+}
+
+.tags span {
+    display: inline-block;
+    background: rgba(0,234,255,0.15);
+    color: var(--cyan);
+    padding: 6px 12px;
+    margin: 5px 3px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--cyan);
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+/* CERTIFICATES */
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    gap: 25px;
+}
+
+.certificate-card {
+    background: var(--glass);
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-8px);
+}
+
+.certificate-card h3 {
+    color: var(--cyan);
+    margin-bottom: 12px;
+}
+
+.certificate-card p {
+    color: #ddd;
+    line-height: 1.7;
+}
+
+/* CERTIFICATE VIEW BUTTON */
+
+.certificate-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #00eaff;
+    color: #07151a;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.certificate-link:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,234,255,0.4);
+}
+
+/* CONTACT */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.info-card {
+    background: var(--glass);
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+}
+
+.info-card h3 {
+    color: var(--cyan);
+    margin-bottom: 15px;
+}
+
+.info-card a {
+    color: white;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.info-card a:hover {
+    color: var(--cyan);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.35);
+    color: #ccc;
 }
 
 /* RESPONSIVE */
-@media(max-width:768px){
-  #home{
-    flex-direction:column;
-    text-align:center;
-  }
-  #home h1{font-size:2.5rem}
+@media(max-width: 900px) {
+    nav {
+        padding: 15px 4%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+}
+
+@media(max-width: 650px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 3%;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 125px 6% 65px;
+    }
+
+    #home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-content h3 {
+        font-size: 20px;
+    }
+
+    .home-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .about-box {
+        padding: 25px;
+    }
 }
 </style>
 </head>
@@ -118,21 +459,409 @@ nav h2{color:#00eaff}
 
 <!-- NAVBAR -->
 <nav>
-  <h2>Portfolio</h2>
+    <h2>Portfolio.</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
 <!-- HOME -->
 <section id="home">
-  <div class="home-content">
-    <h1>Hi, I'm <span>Shrikant Sahare</span></h1>
-    <p>I build modern, responsive, and visually appealing websites using clean and efficient code.</p>
-    <a href="#" class="btn">Welcome</a>
-  </div>
 
-  <div class="home-img">
-    <img src="https://i.postimg.cc/GtjzPWXy/IMG-20260124-092455.jpg" alt="Shrikant Sahare">
-  </div>
+    <div class="home-content">
+        <h3>Hello, I'm</h3>
+
+        <h1>Shrikant <span>Sahare</span></h1>
+
+        <h3>Computer Science Engineering Student</h3>
+
+        <p>
+            I am passionate about technology, programming and web development.
+            I enjoy learning new technologies and building modern,
+            responsive and user-friendly websites.
+            My goal is to become a skilled Software Engineer.
+        </p>
+
+        <a href="#about" class="btn">Explore My Portfolio</a>
+    </div>
+
+    <div class="home-img">
+        <img
+        src="https://i.postimg.cc/GtjzPWXy/IMG-20260124-092455.jpg"
+        alt="Shrikant Sahare">
+    </div>
+
 </section>
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h1 class="section-title">About <span>Me</span></h1>
+
+    <div class="about-box">
+
+        <p>
+            I’m a passionate and creative Computer Science Engineering student
+            who loves building modern, responsive and user-friendly websites.
+            I enjoy turning ideas into real-world digital experiences using
+            programming and web technologies.
+        </p>
+
+        <p>
+            I am continuously improving my technical knowledge, communication
+            skills and problem-solving abilities. I believe in learning through
+            practice and working on real-world projects.
+        </p>
+
+        <p>
+            My career goal is to become a good Software Engineer and build
+            a successful career in the IT industry.
+        </p>
+
+        <div class="education">
+            <h3 class="highlight">Education</h3>
+            <br>
+            <h3>B.Tech – Computer Science and Engineering</h3>
+            <p>Jhulelal Institute of Technology, Nagpur</p>
+            <p>3rd Year | 5th Semester</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+
+    <h1 class="section-title">My <span>Skills</span></h1>
+
+    <p class="section-text">
+        I am developing my technical skills through academic learning,
+        online courses and practical projects.
+    </p>
+
+    <br><br>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <p>Web Page Structure</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <p>Web Styling and Design</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Interactive Websites</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>C Programming</h3>
+            <p>Programming Fundamentals</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Java</h3>
+            <p>Object-Oriented Programming</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p>Version Control</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+
+    <h1 class="section-title">My <span>Experience</span></h1>
+
+    <div class="experience-container">
+
+        <div class="experience-card">
+            <h3>Information Technology Intern</h3>
+            <p>
+                IT-related experience focused on learning technology,
+                practical tasks and developing professional skills.
+                Add your organization and internship dates here.
+            </p>
+        </div>
+
+        <div class="experience-card">
+            <h3>Vice President</h3>
+            <p>
+                Leadership role involving teamwork, communication,
+                coordination and responsibility.
+                Add your organization and dates here.
+            </p>
+        </div>
+
+        <div class="experience-card">
+            <h3>Game Room Attendant</h3>
+            <p>
+                Experience involving responsibility, coordination
+                and interaction with people.
+                Add your organization and dates here.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+
+    <h1 class="section-title">My <span>Projects</span></h1>
+
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>🏫 Kindergarten School Website</h3>
+
+            <p>
+                A web-based platform designed for a kindergarten school
+                to share school information, activities, events and updates
+                with parents and teachers.
+            </p>
+
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+            </div>
+
+            <a class="project-link"
+               href="https://yashsawalakhe.github.io/KINDERGARDEN-LONARA/index.html"
+               target="_blank" rel="noopener noreferrer">
+               View Project →
+            </a>
+        </div>
+
+        <div class="project-card">
+            <h3>💻 Personal Portfolio Website</h3>
+
+            <p>
+                A personal portfolio website to showcase my introduction,
+                education, technical skills, projects and achievements.
+            </p>
+
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>GitHub Pages</span>
+            </div>
+
+            <a class="project-link"
+               href="https://github.com/Shrikantsahare92/portfolio"
+               target="_blank" rel="noopener noreferrer">
+               View Source Code →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CERTIFICATES SECTION -->
+<section id="certificates">
+
+    <h1 class="section-title">
+        My <span>Certificates</span>
+    </h1>
+
+    <p class="section-text">
+        My learning journey, technical achievements,
+        workshops and participation certificates.
+    </p>
+
+    <br><br>
+
+    <div class="certificate-container">
+
+        <!-- 1 -->
+        <div class="certificate-card">
+            <h3>NPTEL - Corporate Social Responsibility</h3>
+            <p><strong>Organization:</strong> IIT Kharagpur</p>
+            <p><strong>Certificate:</strong> Elite</p>
+            <p><strong>Period:</strong> Jul - Sep 2025</p>
+            <a class="certificate-link"
+               href="certificate1-corporate%20social%20responsibility.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 2 -->
+        <div class="certificate-card">
+            <h3>Foundation Course in Managerial Economics</h3>
+            <p><strong>Organization:</strong> NPTEL - IIT Kharagpur</p>
+            <p><strong>Period:</strong> Jan - Mar 2026</p>
+            <a class="certificate-link"
+               href="certificate2-Foundation%20Course%20in%20Managerial%20Economics.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 3 -->
+        <div class="certificate-card">
+            <h3>Ethics in Engineering Practice</h3>
+            <p><strong>Organization:</strong> NPTEL - IIT Kharagpur</p>
+            <p><strong>Certificate:</strong> Elite</p>
+            <p><strong>Period:</strong> Aug - Oct 2026</p>
+            <a class="certificate-link"
+               href="certificate3-ETHICS%20IN%20ENGINEERING%20PRACTICE.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 4 -->
+        <div class="certificate-card">
+            <h3>Fundamentals of Cybersecurity (EDU-102)</h3>
+            <p><strong>Organization:</strong> Zscaler Academy</p>
+            <p><strong>Year:</strong> 2025</p>
+            <a class="certificate-link"
+               href="certificate4-Fundamentals%20of%20Cybersecurity.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 5 -->
+        <div class="certificate-card">
+            <h3>Techverse - Prakalp & Shikhar 2K26</h3>
+            <p><strong>Organization:</strong> Jhulelal Institute of Technology</p>
+            <p><strong>Event:</strong> 24 & 25 March 2026</p>
+            <p><strong>Achievement:</strong> Participation</p>
+            <a class="certificate-link"
+               href="certificate5-Techverse.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 6 -->
+        <div class="certificate-card">
+            <h3>AI for Students - The Future of AI</h3>
+            <p><strong>Organization:</strong> NxtWave</p>
+            <p><strong>Achievement:</strong> Workshop Participation</p>
+            <p><strong>Date:</strong> 01 December 2024</p>
+            <a class="certificate-link"
+               href="certificate6-Generative%20AI%20Model'.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 7 -->
+        <div class="certificate-card">
+            <h3>Encypherist - Internal Competition</h3>
+            <p><strong>Organization:</strong> Department of CSE, JIT</p>
+            <p><strong>Semester:</strong> Even Semester 2025-26</p>
+            <p><strong>Achievement:</strong> Participation</p>
+            <a class="certificate-link"
+               href="certificate7-Internal%20%20compition.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 8 -->
+        <div class="certificate-card">
+            <h3>JIT ACM Student Chapter</h3>
+            <p><strong>Organization:</strong> Unstop & JIT ACM</p>
+            <p><strong>Team:</strong> Team Tech Titans</p>
+            <p><strong>Achievement:</strong> Participation</p>
+            <a class="certificate-link"
+               href="certificate8-Hackblitz%20ACM.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+        <!-- 9 -->
+        <div class="certificate-card">
+            <h3>Forensic Industrial Risk Evaluation</h3>
+            <p><strong>Organization:</strong> CFIT - Crypto Forensic Technology</p>
+            <p><strong>Event:</strong> Quiz Participation</p>
+            <p><strong>Date:</strong> 10 October 2026</p>
+            <a class="certificate-link"
+               href="certificate9-Forensic%20Industrial%20Risk%20Evaluation.pdf"
+               target="_blank" rel="noopener noreferrer">
+               View Certificate →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <h1 class="section-title">Get in <span>Touch</span></h1>
+
+    <p class="section-text">
+        Interested in connecting, collaborating or discussing technology?
+        Feel free to contact me through the links below.
+    </p>
+
+    <br><br>
+
+    <div class="contact-info">
+
+        <div class="info-card">
+            <h3>📧 Email</h3>
+            <a href="mailto:shrikantsahare92@gmail.com">
+                shrikantsahare92@gmail.com
+            </a>
+        </div>
+
+        <div class="info-card">
+            <h3>💼 LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/shrikant-sahare/"
+               target="_blank" rel="noopener noreferrer">
+               Visit My LinkedIn
+            </a>
+        </div>
+
+        <div class="info-card">
+            <h3>💻 GitHub</h3>
+            <a href="https://github.com/Shrikantsahare92"
+               target="_blank" rel="noopener noreferrer">
+               Visit My GitHub
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Shrikant Sahare. All Rights Reserved.</p>
+    <p>Designed & Developed by Shrikant Sahare</p>
+</footer>
 
 </body>
 </html>
